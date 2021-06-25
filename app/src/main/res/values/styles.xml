@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MyDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="BottomNavi" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/selgothic</item>
+        <item name="fontWeight">400</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+    
+    <style name="TabTheme" parent="Theme.AppCompat.DayNight">
+        <item name="colorPrimary">#133b39</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">#99ffffff</item>
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+    <style name="Splash" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+</resources>

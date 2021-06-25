@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Portfolio</string>
+    <string name="intro_title">Hello, I`m Kang Seok Joo\n\nThis is a splash/intro screen.</string>
+    <string name="app_lang">*This application can be replaced in English according to system settings.</string>
+    <string name="Login_tilte">PortFolio</string>
+    <string name="email">Email</string>
+    <string name="pw">PassWord</string>
+    <string name="login">Login</string>
+    <string name="pw_reset">Password Reset</string>
+    <string name="signup">Sign-Up</string>
+    <string name="kakao_signfail">Please check the consent item to enter the email information you are signing up for.</string>
+    <string name="Login_auto">Auto Login</string>
+</resources>
