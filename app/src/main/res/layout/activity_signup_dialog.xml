@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:paddingVertical="30dp"
+    android:layout_gravity="center"
+    android:background="@drawable/dialogbg"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Sign_other"
+        android:textSize="16sp"
+        android:fontFamily="@font/esamanru"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="#de000000"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C7C7C7"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/SignIn_ActEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="#CC218CFF"
+        android:textSize="14sp"
+        android:fontFamily="@font/selgothic"
+        android:text="@string/Sign_email"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C7C7C7"
+        android:layout_marginVertical="10dp"/>
+
+    <TextView
+        android:id="@+id/SignIn_ActNaver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="#CC218CFF"
+        android:textSize="14sp"
+        android:fontFamily="@font/selgothic"
+        android:text="@string/Sign_naver"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C7C7C7"
+        android:layout_marginVertical="10dp"/>
+
+    <TextView
+        android:id="@+id/SignIn_ActGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="#CC218CFF"
+        android:textSize="14sp"
+        android:fontFamily="@font/selgothic"
+        android:text="@string/Sign_google"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C7C7C7"
+        android:layout_marginVertical="10dp"/>
+
+    <TextView
+        android:id="@+id/SignIn_ActKakao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="#CC218CFF"
+        android:textSize="14sp"
+        android:fontFamily="@font/selgothic"
+        android:text="@string/Sign_kakao"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C7C7C7"
+        android:layout_marginVertical="10dp"/>
+
+    <TextView
+        android:id="@+id/SignIn_ActCancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="#E71717"
+        android:textSize="14sp"
+        android:fontFamily="@font/esamanru"
+        android:text="@string/Cancle"/>
+
+
+
+</LinearLayout>

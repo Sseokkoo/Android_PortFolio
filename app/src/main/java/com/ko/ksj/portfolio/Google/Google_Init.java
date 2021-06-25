@@ -27,7 +27,7 @@ import com.ko.ksj.portfolio.R;
 public class Google_Init extends AppCompatActivity {
 
     private FirebaseAuth mAuth = null;
-    private GoogleSignInClient mGoogleSignInClient;
+    public GoogleSignInClient mGoogleSignInClient;
     private static final int RC_SIGN_IN = 9001;
 
     @Override

@@ -10,4 +10,17 @@
     <string name="signup">Sign-Up</string>
     <string name="kakao_signfail">Please check the consent item to enter the email information you are signing up for.</string>
     <string name="Login_auto">Auto Login</string>
+    <string name="Naver_Sign">It`s linked to Naver. Please wait a moment.</string>
+    <string name="Kakao_Sign">It`s linked to Kakao. Please wait a moment.</string>
+    <string name="Sign_other">Membership type</string>
+    <string name="Sign_email">Email Join</string>
+    <string name="Sign_naver">Naver Join</string>
+    <string name="Sign_kakao">Kakao Join</string>
+    <string name="Sign_google">Google Join</string>
+    <string name="Cancle">Cancle</string>
+    <string name="nickname">Nickname</string>
+    <string name="pw_confirm">Password Confirm</string>
+    <string name="confirm">confirm</string>
+    <string name="NickName_Enter">Please enter a nickname.</string>
+    <string name="Password_Enter">Please check the password you entered.</string>
 </resources>

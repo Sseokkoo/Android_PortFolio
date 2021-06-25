@@ -17,21 +17,24 @@
         <activity
             android:name=".Intro"
             android:screenOrientation="portrait" >
-
             <!-- android:theme="@style/Splash"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".SignUp.SignUpActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".SignUp.SignUpDialog"
+            android:theme="@style/Theme.MyDialog"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
                 <data
                     android:host="oauth"

@@ -10,4 +10,18 @@
     <string name="signup">회원가입</string>
     <string name="kakao_signfail">가입하는 이메일정보 입력을 위해 동의항목 체크 부탁드립니다.</string>
     <string name="Login_auto">자동 로그인</string>
+    <string name="Naver_Sign">네이버와 연동 중입니다 잠시만 기다려주세요.</string>
+    <string name="Kakao_Sign">카카오와 연동 중입니다 잠시만 기다려주세요.</string>
+    <string name="Sign_other">회원가입 종류</string>
+    <string name="Sign_email">이메일로 가입</string>
+    <string name="Sign_naver">네이버로 가입</string>
+    <string name="Sign_kakao">카카오로 가입</string>
+    <string name="Sign_google">구글로 가입</string>
+    <string name="Cancle">취소</string>
+    <string name="nickname">닉네임</string>
+    <string name="pw_confirm">패스워드 확인</string>
+    <string name="confirm">확인</string>
+    <string name="NickName_Enter">닉네임을 입력 해주세요.</string>
+    <string name="Password_Enter">입력하신 비밀번호를 확인 해주세요.</string>
+
 </resources>

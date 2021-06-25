@@ -22,11 +22,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class Naver_Init extends AppCompatActivity {
-    public static String OAUTH_CLIENT_ID = "JV9TxKcClc3tDB2eOCHm";
-    public static String OAUTH_CLIENT_SECRET = "dn0_WXAPqd";
-    public static String OAUTH_CLIENT_NAME = "PortFolio";
+    public String OAUTH_CLIENT_ID = "JV9TxKcClc3tDB2eOCHm";
+    public String OAUTH_CLIENT_SECRET = "dn0_WXAPqd";
+    public String OAUTH_CLIENT_NAME = "PortFolio";
 
-    public static OAuthLogin mOAuthLoginInstance;
+    public OAuthLogin mOAuthLoginInstance;
     public static Context mContext;
 
     @Override

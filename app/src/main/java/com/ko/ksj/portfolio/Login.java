@@ -2,6 +2,7 @@ package com.ko.ksj.portfolio;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
 
-    String Email, Id, Password;
+    String Email, Password,EDTId, EDTPassword;
     EditText Login_EDTId, Login_EDTPassword;
     Button Login_BTNLogin, Login_BTNPassReset, Login_BTNSignIn;
     LinearLayout Login_BTNNaver, Login_BTNGoogle, Login_BTNKakao;
@@ -26,6 +27,7 @@ public class Login extends AppCompatActivity {
         SharedPreferences.Editor editor = pref.edit();
 
         pref.getString("email", Email);
+        pref.getString("password", Password);
 
         Login_EDTId = findViewById(R.id.Login_EDTId);
         Login_EDTPassword = findViewById(R.id.Login_EDTPassword);
@@ -41,9 +43,14 @@ public class Login extends AppCompatActivity {
 
 
         Login_BTNLogin.setOnClickListener(v -> {
-            Id = Login_EDTId.getText().toString();
-            Password = Login_EDTPassword.getText().toString();
-        });
-    }
+            EDTId = Login_EDTId.getText().toString();
+            EDTPassword = Login_EDTPassword.getText().toString();
 
+            if (EDTId.equals(Email) && EDTPassword.equals(Password)){
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
 }
