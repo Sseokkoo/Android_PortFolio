@@ -12,23 +12,26 @@ import com.ko.ksj.portfolio.MainActivity;
 import com.ko.ksj.portfolio.R;
 
 public class SignUp_Check extends AppCompatActivity {
+
+    String Email;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
-        if () {
+        pref.getString("email", Email);
+        if (Email.contains("@") || Email.contains(".")) {
             dialog.setMessage(getResources().getString(R.string.email_error1));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
             alertDialog.setTitle(getResources().getString(R.string.email));
             alertDialog.show();
-        } else if (Cheak.equals("EMail_Duplication")) {
+        } else if (Email.equals()) {
             dialog.setMessage(getResources().getString(R.string.email_error2));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
-            alertDialog.setTitle(getResources().getString(R.string.email_error2));
+            alertDialog.setTitle(getResources().getString(R.string.email));
             alertDialog.show();
         } else if (Cheak.equals("Password_815")) {
             dialog.setMessage(getResources().getString(R.string.pass_error1));
