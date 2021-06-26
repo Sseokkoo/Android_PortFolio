@@ -23,5 +23,12 @@
     <string name="confirm">확인</string>
     <string name="NickName_Enter">닉네임을 입력 해주세요.</string>
     <string name="Password_Enter">입력하신 비밀번호를 확인 해주세요.</string>
+    <string name="email_error1">올바른 E-Mail 형식이 아닙니다. 다시 시도해주세요.</string>
+    <string name="email_error2">이미 사용중인 이메일입니다. 로그인 해주세요!</string>
+    <string name="pass_error1">비밀번호는 영문, 숫자, 특수문자를 혼합하여 최소 8자리 ~ 최대 15자리 이내로 입력해주세요.</string>
+    <string name="pass_error2">비밀번호는 공백없이 입력해주세요.</string>
+    <string name="pass_error3">영문, 숫자, 특수문자를 혼합하여 입력해주세요.</string>
+    <string name="sign_success">가입에 성공하셨습니다. 가입을 축하드립니다~!</string>
+    <string name="sign">가입하기</string>
 
 </resources>

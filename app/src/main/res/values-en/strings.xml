@@ -23,4 +23,11 @@
     <string name="confirm">confirm</string>
     <string name="NickName_Enter">Please enter a nickname.</string>
     <string name="Password_Enter">Please check the password you entered.</string>
+    <string name="email_error1">This is not a valid E-Mail format. Please try again.</string>
+    <string name="email_error2">This email is already in use. Sign in, please.!</string>
+    <string name="pass_error1">Please enter the password by mixing English, numbers, and special characters at least 8 to 15 digits.</string>
+    <string name="pass_error2">Please enter the password without spaces.</string>
+    <string name="pass_error3">Please mix English, numbers, and special characters.</string>
+    <string name="sign_success">Your join was successful. Congratulations on joining us!</string>
+    <string name="sign">Sign_Up</string>
 </resources>
