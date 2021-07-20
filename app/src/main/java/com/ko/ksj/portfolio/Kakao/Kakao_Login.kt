@@ -11,6 +11,7 @@ import com.kakao.sdk.user.UserApiClient
 import com.ko.ksj.portfolio.Kakao.Kakao_Init.Companion.TAG
 import com.ko.ksj.portfolio.MainActivity
 import com.ko.ksj.portfolio.R
+import com.ko.ksj.portfolio.SignUp.SignUpActivity
 
 class Kakao_Login : Application() {
     override fun onCreate() {
@@ -86,7 +87,7 @@ class Kakao_Login : Application() {
                                                     editor.putString("name", user.kakaoAccount?.profile?.nickname)
                                                     editor.apply()
 
-                                                    val intent = Intent(this, MainActivity::class.java)
+                                                    val intent = Intent(this, SignUpActivity::class.java)
                                                     startActivity(intent)
                                                 }
                                             }

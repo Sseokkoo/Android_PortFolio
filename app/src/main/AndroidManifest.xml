@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
-        <activity android:name=".Login" />
+        <activity android:name=".Login"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Google.Google_Init"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Intro"
             android:screenOrientation="portrait" >

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".SignUp.SignUpActivity">
 
     <RelativeLayout
         android:id="@+id/SignIn_LI1"
@@ -109,8 +110,8 @@
         android:textFontWeight="300"
         android:textSize="16sp"
         android:layout_marginHorizontal="30dp"
-        android:fontFamily="@font/snsfont"
-        android:text="회원가입"
+        android:fontFamily="@font/esamanru"
+        android:text="@string/signup"
         android:background="@drawable/login_btnsub"
         app:layout_constraintVertical_bias="0.9"
         app:layout_constraintTop_toTopOf="parent"

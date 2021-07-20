@@ -36,8 +36,8 @@ public class SignUpActivity extends AppCompatActivity {
 
     ImageView back;
     Button submit;
-
-    String logintype, email, name, id, pass, passok;
+    SharedPreferences pref;
+    String logintype, email, name, pass, passok;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,53 +54,69 @@ public class SignUpActivity extends AppCompatActivity {
             finish();
         });
 
-        SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
+        pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
         email = pref.getString("email", "");
-        id = pref.getString("id", "");
+        logintype = pref.getString("login_type","");
 
         if (!logintype.equals("default")) {
             edit_email.setVisibility(View.GONE);
+            edit_name.setVisibility(View.GONE);
         }
         submit = (Button) findViewById(R.id.Sign_BTNSignIn);
         submit.setOnClickListener(v -> {
-//            SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
-//            SharedPreferences.Editor editor = pref.edit();
-//
-//            editor.putString("login_type",logintype);
-//            editor.putString("login_type",name);
-//            editor.putString("login_type",email;
-//            editor.putString("login_type",pass);
-//            editor.putString("login_type",passok);
+
             if (logintype.equals("default")) {
                 name = edit_name.getText().toString();
                 email = edit_email.getText().toString();
                 pass = edit_pass.getText().toString();
                 passok = edit_pass_ok.getText().toString();
-            } else {
-                name = edit_name.getText().toString();
-            }
-            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-            Log.e(getApplicationContext().toString(), edit_name.getText().toString());
-            if (name.equals("") || name == null) {
-                dialog.setMessage(getResources().getString(R.string.NickName_Enter));
-                dialog.setPositiveButton(getResources().getString(R.string.confirm), null);
-                AlertDialog alertDialog = dialog.create();
-                alertDialog.setTitle(getResources().getString(R.string.confirm));
-                alertDialog.show();
-            } else if (edit_pass.getVisibility() == View.VISIBLE && !pass.equals(passok) && pass != null) {
-                dialog.setMessage(getResources().getString(R.string.Password_Enter));
-                dialog.setPositiveButton(getResources().getString(R.string.confirm), null);
-                AlertDialog alertDialog = dialog.create();
-                alertDialog.setTitle(getResources().getString(R.string.pw));
-                alertDialog.show();
 
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                Log.e(getApplicationContext().toString(), edit_name.getText().toString());
+                if (name.equals("") || name == null) {
+                    dialog.setMessage(getResources().getString(R.string.NickName_Enter));
+                    dialog.setPositiveButton(getResources().getString(R.string.confirm), null);
+                    AlertDialog alertDialog = dialog.create();
+                    alertDialog.setTitle(getResources().getString(R.string.confirm));
+                    alertDialog.show();
+                } else if (edit_pass.getVisibility() == View.VISIBLE && !pass.equals(passok) && pass != null) {
+                    dialog.setMessage(getResources().getString(R.string.Password_Enter));
+                    dialog.setPositiveButton(getResources().getString(R.string.confirm), null);
+                    AlertDialog alertDialog = dialog.create();
+                    alertDialog.setTitle(getResources().getString(R.string.pw));
+                    alertDialog.show();
+
+                } else {
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putString("name",edit_name.toString());
+                    editor.putString("email",edit_email.toString());
+                    editor.putString("password", edit_pass.toString());
+                    Intent intent = new Intent(this, SignUp_Check.class);
+                    startActivity(intent);
+                }
             } else {
-                SharedPreferences.Editor editor = pref.edit();
-                editor.putString("email",edit_email.toString());
-                editor.putString("password", edit_pass.toString());
-                Intent intent = new Intent(this, SignUp_Check.class);
-                startActivity(intent);
+                pass = edit_pass.getText().toString();
+                passok = edit_pass_ok.getText().toString();
+
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+
+                if (edit_pass.getVisibility() == View.VISIBLE && !pass.equals(passok) && pass != null) {
+                    dialog.setMessage(getResources().getString(R.string.Password_Enter));
+                    dialog.setPositiveButton(getResources().getString(R.string.confirm), null);
+                    AlertDialog alertDialog = dialog.create();
+                    alertDialog.setTitle(getResources().getString(R.string.pw));
+                    alertDialog.show();
+
+                } else {
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putString("name",edit_name.toString());
+                    editor.putString("email",edit_email.toString());
+                    editor.putString("password", edit_pass.toString());
+                    Intent intent = new Intent(this, SignUp_Check.class);
+                    startActivity(intent);
+                }
             }
+
         });
 
     }

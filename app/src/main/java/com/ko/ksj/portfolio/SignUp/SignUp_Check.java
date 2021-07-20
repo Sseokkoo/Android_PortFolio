@@ -13,45 +13,46 @@ import com.ko.ksj.portfolio.R;
 
 public class SignUp_Check extends AppCompatActivity {
 
-    String Email;
+    String Email, Password;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
-        pref.getString("email", Email);
-        if (Email.contains("@") || Email.contains(".")) {
+        Email = pref.getString("email", "");
+        Password = pref.getString("password","");
+        if (!Email.contains("@") || !Email.contains(".")) {
             dialog.setMessage(getResources().getString(R.string.email_error1));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
             alertDialog.setTitle(getResources().getString(R.string.email));
             alertDialog.show();
-        } else if (Email.equals()) {
-            dialog.setMessage(getResources().getString(R.string.email_error2));
-            dialog.setPositiveButton("확인", null);
-            AlertDialog alertDialog = dialog.create();
-            alertDialog.setTitle(getResources().getString(R.string.email));
-            alertDialog.show();
-        } else if (Cheak.equals("Password_815")) {
+//        } else if (Email.equals()) {
+//            dialog.setMessage(getResources().getString(R.string.email_error2));
+//            dialog.setPositiveButton("확인", null);
+//            AlertDialog alertDialog = dialog.create();
+//            alertDialog.setTitle(getResources().getString(R.string.email));
+//            alertDialog.show();
+        } else if (!Password.matches("^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[$@$!%*#?&])[A-Za-z[0-9]$@$!%*+#?&]{8,15}$")) {
             dialog.setMessage(getResources().getString(R.string.pass_error1));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
             alertDialog.setTitle(getResources().getString(R.string.pw));
             alertDialog.show();
-        } else if (Cheak.equals("Password_Space")) {
+        } else if (Password.contains(" ") || Password.contains("")) {
             dialog.setMessage(getResources().getString(R.string.pass_error2));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
             alertDialog.setTitle(getResources().getString(R.string.pw));
             alertDialog.show();
-        } else if (Cheak.equals("Nomalization_Password")) {
-            dialog.setMessage(getResources().getString(R.string.pass_error3));
+        } else if (Email.contains(" ") || Email.contains("")) {
+            dialog.setMessage(getResources().getString(R.string.pass_error2));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
             alertDialog.setTitle(getResources().getString(R.string.pw));
             alertDialog.show();
-        } else if (Cheak.equals("Success")) {
+        } else {
             dialog.setMessage(getResources().getString(R.string.sign_success));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();

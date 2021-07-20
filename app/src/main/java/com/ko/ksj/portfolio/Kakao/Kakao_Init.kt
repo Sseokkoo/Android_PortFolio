@@ -9,6 +9,7 @@ import com.kakao.sdk.common.model.KakaoSdkError
 import com.kakao.sdk.user.UserApiClient
 import com.ko.ksj.portfolio.Kakao.Kakao_Init.Companion.TAG
 import com.ko.ksj.portfolio.MainActivity
+import com.ko.ksj.portfolio.SignUp.SignUpActivity
 
 class Kakao_Init : Application() {
     override fun onCreate() {
@@ -24,26 +25,34 @@ class Kakao_Init : Application() {
             UserApiClient.instance.loginWithKakaoTalk(applicationContext) { token, error ->
                 if (error != null) {
                     Log.e(TAG, "로그인 실패", error)
-                    val intent = Intent(this, Kakao_Token::class.java)
-                    startActivity(intent)
+//                    val intent = Intent(applicationContext, Kakao_Token::class.java)
+//                    startActivity(intent)
+                    val kakaoToken = Kakao_Token::class.java
+                    kakaoToken.newInstance()
                 }
                 else if (token != null) {
                     Log.e(TAG, "로그인 성공 ${token.accessToken}")
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+//                    val intent = Intent(applicationContext, SignUpActivity::class.java)
+//                    startActivity(intent)
+                    val signUpActivity = SignUpActivity::class.java
+                    signUpActivity.newInstance()
                 }
             }
         } else {
             UserApiClient.instance.loginWithKakaoAccount(applicationContext) { token, error ->
                 if (error != null) {
                     Log.e(TAG, "로그인 실패", error)
-                    val intent = Intent(this, Kakao_Token::class.java)
-                    startActivity(intent)
+//                    val intent = Intent(applicationContext, Kakao_Token::class.java)
+//                    startActivity(intent)
+                    val kakaoToken = Kakao_Token::class.java
+                    kakaoToken.newInstance()
                 }
                 else if (token != null) {
                     Log.i(TAG, "로그인 성공 ${token.accessToken}")
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+//                    val intent = Intent(applicationContext, SignUpActivity::class.java)
+//                    startActivity(intent)
+                    val signUpActivity = SignUpActivity::class.java
+                    signUpActivity.newInstance()
                 }
             }
         }

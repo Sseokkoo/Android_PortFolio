@@ -162,7 +162,6 @@
 
 
     <LinearLayout
-        android:id="@+id/Login_BTNNaver"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -177,6 +176,7 @@
         app:layout_constraintVertical_bias="0">
 
         <Button
+            android:id="@+id/Login_BTNNaver"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@drawable/naver" />
@@ -184,7 +184,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/Login_BTNGoogle"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -199,6 +198,7 @@
         app:layout_constraintVertical_bias="0">
 
         <Button
+            android:id="@+id/Login_BTNGoogle"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/google" />
@@ -206,7 +206,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/Login_BTNKakao"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -221,6 +220,7 @@
         app:layout_constraintVertical_bias="0">
 
         <Button
+            android:id="@+id/Login_BTNKakao"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/kakao"

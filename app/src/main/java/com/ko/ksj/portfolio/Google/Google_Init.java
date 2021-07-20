@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.ko.ksj.portfolio.R;
+import com.ko.ksj.portfolio.SignUp.SignUpActivity;
 
 public class Google_Init extends AppCompatActivity {
 
@@ -115,6 +116,8 @@ public class Google_Init extends AppCompatActivity {
         if (user != null) {
 //            GetMain();
 //            googleloginOn = true;
+            Intent intent = new Intent(this, SignUpActivity.class);
+            startActivity(intent);
         }
     }
 

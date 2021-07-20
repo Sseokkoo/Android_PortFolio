@@ -49,6 +49,7 @@ dependencies {
     implementation "com.kakao.sdk:v2-user:2.5.2" // 카카오 로그인
 
     implementation 'com.naver.nid:naveridlogin-android-sdk:4.2.6' // 네이버 로그인
+//    implementation files('libs/naveridlogin_android_sdk_4.2.6.aar')
 
     implementation platform('com.google.firebase:firebase-bom:28.1.0') // 구글
     implementation 'com.google.firebase:firebase-auth:21.0.1'

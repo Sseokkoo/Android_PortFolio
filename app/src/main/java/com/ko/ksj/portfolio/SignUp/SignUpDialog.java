@@ -1,6 +1,5 @@
 package com.ko.ksj.portfolio.SignUp;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ko.ksj.portfolio.Google.Google_Init;
 import com.ko.ksj.portfolio.Kakao.Kakao_Init;
-import com.ko.ksj.portfolio.Naver.Naver_Init;
+import com.ko.ksj.portfolio.Login;
 import com.ko.ksj.portfolio.R;
 
 public class SignUpDialog extends AppCompatActivity {
@@ -39,8 +38,8 @@ public class SignUpDialog extends AppCompatActivity {
         });
         naver.setOnClickListener(v -> {
             Toast.makeText(this, getResources().getString(R.string.Naver_Sign), Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, Naver_Init.class);
-            startActivity(intent);
+            Login login = new Login();
+            login.Naver_start();
             finish();
         });
         google.setOnClickListener(v -> {
