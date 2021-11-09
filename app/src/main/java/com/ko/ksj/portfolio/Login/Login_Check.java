@@ -1,4 +1,4 @@
-package com.ko.ksj.portfolio.SignUp;
+package com.ko.ksj.portfolio.Login;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,11 +9,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ko.ksj.portfolio.R;
-import com.ko.ksj.portfolio.View.MainActivity;
 
-public class SignUp_Check extends AppCompatActivity {
+public class Login_Check extends AppCompatActivity {
 
-    String Email, Password, Name;
+    String Email, Password;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +21,6 @@ public class SignUp_Check extends AppCompatActivity {
         SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
         Email = pref.getString("email", "");
         Password = pref.getString("password","");
-        Name = pref.getString("name", "");
         if (!Email.contains("@") || !Email.contains(".")) {
             dialog.setMessage(getResources().getString(R.string.email_error1));
             dialog.setPositiveButton("확인", null);
@@ -48,16 +46,12 @@ public class SignUp_Check extends AppCompatActivity {
             alertDialog.setTitle(getResources().getString(R.string.pw));
             alertDialog.show();
         } else if (Email.contains(" ") || Email.contains("")) {
-            dialog.setMessage(getResources().getString(R.string.email_error3));
+            dialog.setMessage(getResources().getString(R.string.pass_error2));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
-            alertDialog.setTitle(getResources().getString(R.string.email));
+            alertDialog.setTitle(getResources().getString(R.string.pw));
             alertDialog.show();
-        }
-//        else if (Email.equals(pref.getString("email",""))){
-//            // 이거 SQL 로 수정필요
-//        }
-        else {
+        } else {
             dialog.setMessage(getResources().getString(R.string.sign_success));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();

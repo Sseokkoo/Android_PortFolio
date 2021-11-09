@@ -1,4 +1,4 @@
-package com.ko.ksj.portfolio;
+package com.ko.ksj.portfolio.Login;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,7 +14,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ko.ksj.portfolio.Kakao.Kakao_Init;
+import com.ko.ksj.portfolio.R;
 import com.ko.ksj.portfolio.SignUp.SignUpActivity;
+import com.ko.ksj.portfolio.View.MainActivity;
 import com.nhn.android.naverlogin.OAuthLogin;
 import com.nhn.android.naverlogin.OAuthLoginHandler;
 
@@ -35,13 +38,10 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.fragment_login_login);
         mContext = Login.this;
             SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
-
-        pref.getString("email", Email);
-        pref.getString("password", Password);
 
         Login_EDTId = findViewById(R.id.Login_EDTId);
         Login_EDTPassword = findViewById(R.id.Login_EDTPassword);
@@ -60,16 +60,25 @@ public class Login extends AppCompatActivity {
             EDTId = Login_EDTId.getText().toString();
             EDTPassword = Login_EDTPassword.getText().toString();
 
+            Email = pref.getString("email","");
+            Password = pref.getString("password", "");
+
             if (EDTId.equals(Email) && EDTPassword.equals(Password)){
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 finish();
+            }else {
+
             }
         });
 
         Login_BTNNaver.setOnClickListener(v -> {
             Log.e("네이버버튼", "호출");
             Naver_start();
+        });
+        Login_BTNKakao.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Kakao_Init.class);
+            startActivity(intent);
         });
     }
 
@@ -83,15 +92,20 @@ public class Login extends AppCompatActivity {
 
     public void Naver_start(){
         Log.e("네이버", "class실행");
-//        String accessToken = mOAuthLoginInstance.getAccessToken(mContext);
+
         //초기화
         mOAuthLoginInstance = OAuthLogin.getInstance();
         mOAuthLoginInstance.init(mContext, OAUTH_CLIENT_ID, OAUTH_CLIENT_SECRET, OAUTH_CLIENT_NAME);
 
 //        mOAuthLoginButton = (OAuthLoginButton) findViewById(R.id.btnNaver);
 //        mOAuthLoginButton.setOAuthLoginHandler(mOAuthLoginHandler);
+//        String accessToken = mOAuthLoginInstance.getAccessToken(mContext);
+//        SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
 
-        mOAuthLoginInstance.startOauthLoginActivity((Activity) mContext, mOAuthLoginHandler);
+//        if (accessToken != null && OAuthLoginState.NEED_LOGIN.OK.equals(mOAuthLoginInstance.getState(getApplicationContext())) &&
+
+         mOAuthLoginInstance.startOauthLoginActivity((Activity) mContext, mOAuthLoginHandler);
+
     }
 
     private OAuthLoginHandler mOAuthLoginHandler = new OAuthLoginHandler() {
@@ -164,18 +178,31 @@ public class Login extends AppCompatActivity {
                 Log.d("확인", "결과 : " + result);
                 if (object.getString("resultcode").equals("00")) {
                     JSONObject jsonObject = new JSONObject(object.getString("response"));
-                    Email = jsonObject.getString("email");
-                    Id = jsonObject.getString("id");
+
                     Log.d("jsonObject", jsonObject.toString());
 
                     SharedPreferences pref = getSharedPreferences("UserInfo", MODE_PRIVATE);
                     SharedPreferences.Editor editor = pref.edit();
+
                     editor.putString("email", jsonObject.getString("email"));
                     editor.putString("name", jsonObject.getString("name"));
+                    editor.putBoolean("naver", true);
                     editor.apply();
-                    Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
-                    startActivity(intent);
-                    finish();
+
+                    if(!pref.getString("password","").equals("") && pref.getBoolean("naver",false)) {
+                        Password = pref.getString("password", "");
+
+                        Intent intent = new Intent(Login.this, MainActivity.class);
+                        startActivity(intent);
+
+                        Toast.makeText(mContext, getResources().getString(R.string.Naver_Connect), Toast.LENGTH_SHORT).show();
+                        finish();
+                    }else {
+                        Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+
                 }
             } catch (Exception e) {
                 e.printStackTrace();

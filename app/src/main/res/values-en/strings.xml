@@ -15,6 +15,7 @@
     <string name="Sign_other">Membership type</string>
     <string name="Sign_email">Email Join</string>
     <string name="Sign_naver">Naver Join</string>
+    <string name="Naver_Connect">You have successfully logged in to Naver.</string>
     <string name="Sign_kakao">Kakao Join</string>
     <string name="Sign_google">Google Join</string>
     <string name="Cancle">Cancle</string>
@@ -30,4 +31,7 @@
     <string name="pass_error3">Please mix English, numbers, and special characters.</string>
     <string name="sign_success">Your join was successful. Congratulations on joining us!</string>
     <string name="sign">Sign_Up</string>
+    <string name="email_error3">Please enter the email without any spaces.</string>
+
+    <string name="kakao_api">cf23d7b83f2ba7af13f7bf203a950183</string>
 </resources>

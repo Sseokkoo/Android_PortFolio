@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ko.ksj.portfolio.Google.Google_Init;
 import com.ko.ksj.portfolio.Kakao.Kakao_Init;
-import com.ko.ksj.portfolio.Login;
+import com.ko.ksj.portfolio.Login.Login;
 import com.ko.ksj.portfolio.R;
 
 public class SignUpDialog extends AppCompatActivity {

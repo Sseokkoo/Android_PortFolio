@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@+id/navigation_splash">
+
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="com.ulike.livecare.ui.login.intro.SplashFragMent"
+        android:label="splash"
+        tools:layout="@layout/fragment_login_splash">
+
+        <action
+            android:id="@+id/action_navigation_splash_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_splash_to_navigation_intro"
+            app:destination="@id/navigation_intro" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_intro"
+        android:name="com.ulike.livecare.ui.login.intro.IntroFragment"
+        android:label="intro"
+        tools:layout="@layout/fragment_login_intro">
+        <action
+            android:id="@+id/action_navigation_intro_to_navigation_login"
+            app:destination="@id/navigation_login" />
+        <action
+            android:id="@+id/action_navigation_intro_to_navigation_auth"
+            app:destination="@id/navigation_auth" />
+        <action
+            android:id="@+id/action_navigation_intro_to_navigation_signupover"
+            app:destination="@id/navigation_signupover" />
+        <action
+            android:id="@+id/action_navigation_intro_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_intro_to_navigation_farmaddover"
+            app:destination="@id/navigation_farmaddover" />
+        <action
+            android:id="@+id/action_navigation_intro_to_navigation_farmaddover_detail"
+            app:destination="@id/navigation_farmaddover_detail" />
+        <action
+            android:id="@+id/action_navigation_intro_to_navigation_signup"
+            app:destination="@id/navigation_signup" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.ulike.livecare.ui.login.login.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/fragment_login_login">
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_auth"
+            app:destination="@id/navigation_auth" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_findtopw"
+            app:destination="@id/navigation_findtopw" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_intro"
+            app:destination="@id/navigation_intro" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_joininfo"
+            app:destination="@id/navigation_joininfo" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_auth"
+        android:name="com.ulike.livecare.ui.login.auth.AuthFragment"
+        android:label="auth"
+        tools:layout="@layout/fragment_login_auth">
+
+        <action
+            android:id="@+id/action_navigation_auth_to_navigation_findtoid"
+            app:destination="@id/navigation_findtoid" />
+        <action
+            android:id="@+id/action_navigation_auth_to_navigation_findtopw"
+            app:destination="@id/navigation_findtopw" />
+        <action
+            android:id="@+id/action_navigation_auth_to_navigation_signup"
+            app:destination="@id/navigation_signup" />
+        <action
+            android:id="@+id/action_navigation_auth_to_navigation_login"
+            app:destination="@id/navigation_login" />
+        <action
+            android:id="@+id/action_navigation_auth_to_navigation_intro"
+            app:destination="@id/navigation_intro" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_findtoid"
+        android:name="com.ulike.livecare.ui.login.find.FindToIdFragment"
+        android:label="findtoid"
+        tools:layout="@layout/fragment_login_findtoid">
+        <action
+            android:id="@+id/action_navigation_findtoid_to_navigation_login"
+            app:destination="@id/navigation_login" />
+        <action
+            android:id="@+id/action_navigation_findtoid_to_navigation_signup"
+            app:destination="@id/navigation_signup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_findtopw"
+        android:name="com.ulike.livecare.ui.login.find.FindToPwFragment"
+        android:label="findtopw"
+        tools:layout="@layout/fragment_login_findtopw">
+
+        <action
+            android:id="@+id/action_navigation_findtopw_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_signup"
+        android:name="com.ulike.livecare.ui.login.sign.SignupFragment"
+        android:label="signup"
+        tools:layout="@layout/fragment_login_signup">
+        <action
+            android:id="@+id/action_navigation_signup_to_navigation_joininfo"
+            app:destination="@id/navigation_joininfo" />
+        <action
+            android:id="@+id/action_navigation_signup_to_navigation_intro"
+            app:destination="@id/navigation_intro" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_joininfo"
+        android:name="com.ulike.livecare.ui.login.sign.JoinInfoFragment"
+        android:label="joininfo"
+        tools:layout="@layout/fragment_login_joininfo">
+        <action
+            android:id="@+id/action_navigation_joininfo_to_navigation_farmlookup"
+            app:destination="@id/navigation_farmlookup" />
+        <action
+            android:id="@+id/action_navigation_joininfo_to_navigation_signup"
+            app:destination="@id/navigation_signup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_farmlookup"
+        android:name="com.ulike.livecare.ui.login.sign.FarmLookupFragment"
+        android:label="farmlookup"
+        tools:layout="@layout/fragment_login_farmlookup">
+        <action
+            android:id="@+id/action_navigation_farmlookup_to_navigation_farmmoreinfo"
+            app:destination="@id/navigation_farmmoreinfo" />
+
+        <action
+            android:id="@+id/action_navigation_farmlookup_tonavigation_joininfo"
+            app:destination="@id/navigation_joininfo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_farmmoreinfo"
+        android:name="com.ulike.livecare.ui.login.sign.farmmoreinfo.FarmMoreInfoFragment"
+        android:label="farmmoreinfo"
+        tools:layout="@layout/fragment_login_farmmoreinfo">
+        <action
+            android:id="@+id/action_navigation_farmmoreinfo_to_navigation_term"
+            app:destination="@id/navigation_term" />
+        <action
+            android:id="@+id/action_navigation_farmmoreinfo_to_navigation_farmlookup"
+            app:destination="@id/navigation_farmlookup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_term"
+        android:name="com.ulike.livecare.ui.login.sign.TermFragment"
+        android:label="term"
+        tools:layout="@layout/fragment_login_term">
+
+        <action
+            android:id="@+id/action_navigation_term_to_navigation_farmmoreinfo"
+            app:destination="@id/navigation_farmmoreinfo" />
+        <action
+            android:id="@+id/action_navigation_term_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_inquiryresult"
+        android:name="com.ulike.livecare.ui.login.sign.InquiryResultFragment"
+        android:label="inquiryresult"
+        tools:layout="@layout/fragment_login_inquiryresult">
+        <action
+            android:id="@+id/action_navigation_inquiryresult_to_navigation_farmlookup"
+            app:destination="@id/navigation_farmlookup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_signupover"
+        android:name="com.ulike.livecare.ui.login.signover.SignupOverFragment"
+        android:label="signupover"
+        tools:layout="@layout/fragment_login_signupover">
+        <action
+            android:id="@+id/action_navigation_signupover_to_navigation_joininfoover"
+            app:destination="@id/navigation_joininfoover" />
+        <action
+            android:id="@+id/action_navigation_signupover_to_navigation_intro"
+            app:destination="@id/navigation_intro" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_joininfoover"
+        android:name="com.ulike.livecare.ui.login.signover.JoinInfoOverFragment"
+        android:label="joininfoover"
+        tools:layout="@layout/fragment_login_joininfoover">
+        <action
+            android:id="@+id/action_navigation_joininfoover_to_navigation_farmaddover_detail"
+            app:destination="@id/navigation_farmaddover_detail" />
+        <action
+            android:id="@+id/action_navigation_joininfoover_to_navigation_signupover"
+            app:destination="@id/navigation_signupover" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_farmaddover"
+        android:name="com.ulike.livecare.ui.login.signover.FarmAdd.FarmAddOverFragment"
+        android:label="farmaddover"
+        tools:layout="@layout/fragment_login_farmaddover">
+
+        <action
+            android:id="@+id/action_navigation_farmaddover_to_navigation_farmaddover_detail"
+            app:destination="@id/navigation_farmaddover_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_farmaddover_detail"
+        android:name="com.ulike.livecare.ui.login.signover.FarmAdd.FarmAddOverDetailFragment"
+        android:label="farmaddover_detail"
+        tools:layout="@layout/fragment_login_farmaddover_detail">
+
+        <action
+            android:id="@+id/action_navigation_farmaddover_detail_to_navigation_joininfoover"
+            app:destination="@id/navigation_joininfoover" />
+        <action
+            android:id="@+id/action_navigation_farmaddover_detail_to_navigation_farmaddover"
+            app:destination="@id/navigation_farmaddover" />
+        <action
+            android:id="@+id/action_navigation_farmaddover_detail_to_navigation_termover"
+            app:destination="@id/navigation_termover" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_termover"
+        android:name="com.ulike.livecare.ui.login.signover.TermOverFragment"
+        android:label="termover"
+        tools:layout="@layout/fragment_login_term">
+
+        <action
+            android:id="@+id/action_navigation_termover_to_navigation_farmaddover"
+            app:destination="@id/navigation_farmaddover" />
+        <action
+            android:id="@+id/action_navigation_termover_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+    <activity
+        android:id="@+id/navigation_home"
+        android:name="com.ulike.livecare.ui.home.HomeActivity"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+</navigation>

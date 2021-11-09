@@ -1,10 +1,13 @@
-package com.ko.ksj.portfolio;
+package com.ko.ksj.portfolio.Splash;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.ko.ksj.portfolio.Login.Login;
+import com.ko.ksj.portfolio.R;
 
 public class Intro extends AppCompatActivity {
 

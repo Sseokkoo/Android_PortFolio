@@ -2,7 +2,6 @@ package com.ko.ksj.portfolio.SignUp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,20 +12,8 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ko.ksj.portfolio.Login;
-import com.ko.ksj.portfolio.MainActivity;
+import com.ko.ksj.portfolio.Login.Login;
 import com.ko.ksj.portfolio.R;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.lang.reflect.Parameter;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -51,6 +38,8 @@ public class SignUpActivity extends AppCompatActivity {
         back = findViewById(R.id.SignIn_IVBack);
 
         back.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Login.class);
+            startActivity(intent);
             finish();
         });
 
@@ -71,29 +60,26 @@ public class SignUpActivity extends AppCompatActivity {
                 pass = edit_pass.getText().toString();
                 passok = edit_pass_ok.getText().toString();
 
-                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-                Log.e(getApplicationContext().toString(), edit_name.getText().toString());
-                if (name.equals("") || name == null) {
-                    dialog.setMessage(getResources().getString(R.string.NickName_Enter));
-                    dialog.setPositiveButton(getResources().getString(R.string.confirm), null);
-                    AlertDialog alertDialog = dialog.create();
-                    alertDialog.setTitle(getResources().getString(R.string.confirm));
-                    alertDialog.show();
-                } else if (edit_pass.getVisibility() == View.VISIBLE && !pass.equals(passok) && pass != null) {
-                    dialog.setMessage(getResources().getString(R.string.Password_Enter));
-                    dialog.setPositiveButton(getResources().getString(R.string.confirm), null);
-                    AlertDialog alertDialog = dialog.create();
-                    alertDialog.setTitle(getResources().getString(R.string.pw));
-                    alertDialog.show();
+//                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+//                Log.e(getApplicationContext().toString(), edit_name.getText().toString());
 
-                } else {
-                    SharedPreferences.Editor editor = pref.edit();
-                    editor.putString("name",edit_name.toString());
-                    editor.putString("email",edit_email.toString());
-                    editor.putString("password", edit_pass.toString());
-                    Intent intent = new Intent(this, SignUp_Check.class);
-                    startActivity(intent);
-                }
+
+
+//
+//                } else {
+//                    SharedPreferences.Editor editor = pref.edit();
+//                    editor.putString("name",edit_name.toString());
+//                    editor.putString("email",edit_email.toString());
+//                    editor.putString("password", edit_pass.toString());
+//                    editor.apply();
+//                    Intent intent = new Intent(this, SignUp_Check.class);
+//                    startActivity(intent);
+//                }
+                SharedPreferences.Editor editor = pref.edit();
+                    editor.putString("Check_name",edit_name.toString());
+                    editor.putString("Check_email",edit_email.toString());
+                    editor.putString("Check_password", edit_pass.toString());
+                    editor.apply();
             } else {
                 pass = edit_pass.getText().toString();
                 passok = edit_pass_ok.getText().toString();
