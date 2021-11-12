@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import com.kakao.sdk.common.KakaoSdk
+import com.ko.ksj.portfolio.Model.Title
 import com.ko.ksj.portfolio.Model.User
 import com.ko.ksj.portfolio.R
 import com.ko.ksj.portfolio.ViewModel.MainViewModel
@@ -24,13 +25,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
         Init()
-        val model: MainViewModel by viewModels()
-        model.getUsers().observe(this, Observer<List<User>> { users ->
-            // update UI
-        })
 
+        val model: MainViewModel by viewModels()
+//        model.getUsers().observe(this, Observer<List<User>> { users ->
+//            // update UI
+//        })
+navController
+        model.getTitle().observe(this, Observer{
+
+        })
     }
 
     fun Init() {

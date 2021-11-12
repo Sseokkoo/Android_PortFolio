@@ -3,15 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android_Portfolio/app/src/main/res/layout/activity_dabase.xml" value="0.3619791666666667" />
-        <entry key="..\:/Android_Portfolio/app/src/main/res/layout/activity_intro.xml" value="0.3619791666666667" />
-        <entry key="..\:/Android_Portfolio/app/src/main/res/layout/activity_login.xml" value="0.17603850050658562" />
-        <entry key="..\:/Android_Portfolio/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Android_Portfolio/app/src/main/res/layout/layout_login_title.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/Sseokkoo/Desktop/ULikeKorea/Android_PortFolio/app/src/main/res/layout/activity_dabase.xml" value="0.24728260869565216" />
+        <entry key="..\:/Users/Sseokkoo/Desktop/ULikeKorea/Android_PortFolio/app/src/main/res/layout/activity_intro.xml" value="0.24728260869565216" />
+        <entry key="..\:/Users/Sseokkoo/Desktop/ULikeKorea/Android_PortFolio/app/src/main/res/layout/fragment_sign_up.xml" value="0.264" />
+        <entry key="..\:/Users/Sseokkoo/Desktop/ULikeKorea/Android_PortFolio/app/src/main/res/layout/fragment_signup_dialog.xml" value="0.24728260869565216" />
+        <entry key="..\:/Users/Sseokkoo/Desktop/ULikeKorea/Android_PortFolio/app/src/main/res/layout/layout_login_title.xml" value="0.24728260869565216" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

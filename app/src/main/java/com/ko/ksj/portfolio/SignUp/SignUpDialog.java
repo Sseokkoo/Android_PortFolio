@@ -19,7 +19,7 @@ public class SignUpDialog extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup_dialog);
+        setContentView(R.layout.fragment_signup_dialog);
 
         email = findViewById(R.id.SignIn_ActEmail);
         naver = findViewById(R.id.SignIn_ActNaver);
