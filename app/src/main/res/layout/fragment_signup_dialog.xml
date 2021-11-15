@@ -5,14 +5,14 @@
     android:layout_height="wrap_content"
     android:paddingVertical="30dp"
     android:layout_gravity="center"
-    android:background="@drawable/dialogbg"
+    android:background="@drawable/shape_dialog_custom"
     android:orientation="vertical">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Sign_other"
+        android:text="@string/sign_other"
         android:textSize="16sp"
         android:fontFamily="@font/esamanru"
         android:layout_gravity="center"
@@ -35,7 +35,7 @@
         android:textColor="#CC218CFF"
         android:textSize="14sp"
         android:fontFamily="@font/selgothic"
-        android:text="@string/Sign_email"/>
+        android:text="@string/sign_email"/>
 
     <View
         android:layout_width="match_parent"
@@ -52,7 +52,7 @@
         android:textColor="#CC218CFF"
         android:textSize="14sp"
         android:fontFamily="@font/selgothic"
-        android:text="@string/Sign_naver"/>
+        android:text="@string/sign_naver"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -68,7 +68,7 @@
         android:textColor="#CC218CFF"
         android:textSize="14sp"
         android:fontFamily="@font/selgothic"
-        android:text="@string/Sign_google"/>
+        android:text="@string/sign_google"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -84,7 +84,7 @@
         android:textColor="#CC218CFF"
         android:textSize="14sp"
         android:fontFamily="@font/selgothic"
-        android:text="@string/Sign_kakao"/>
+        android:text="@string/sign_kakao"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -100,7 +100,7 @@
         android:textColor="#E71717"
         android:textSize="14sp"
         android:fontFamily="@font/esamanru"
-        android:text="@string/Cancle"/>
+        android:text="@string/common_cancle"/>
 
 
 

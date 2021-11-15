@@ -29,12 +29,15 @@ import com.kakao.sdk.user.UserApiClient
 import com.ko.ksj.portfolio.Interfaces.AsyncTaskResponse
 import com.ko.ksj.portfolio.Interfaces.ResponseMessage
 import com.ko.ksj.portfolio.Interfaces.ResponseObjData
+import com.ko.ksj.portfolio.Model.Config
+import com.ko.ksj.portfolio.Model.DataInfo
 import com.ko.ksj.portfolio.R
 import com.ko.ksj.portfolio.Repository.Task.UserTask
 import com.ko.ksj.portfolio.ViewModel.LoginViewModel
 import com.nhn.android.naverlogin.OAuthLogin
 import com.nhn.android.naverlogin.OAuthLoginHandler
 import com.ko.ksj.portfolio.Repository.Task.NaverUserTask
+import kotlinx.android.synthetic.main.fragment_login_login.*
 
 class LoginFrag : Fragment() {
     val TAG = "LoginFrag"
@@ -76,12 +79,11 @@ class LoginFrag : Fragment() {
     }
 
     fun setting() {
-        BT_Login_Login_LoginBTN.setOnClickListener {
+        BT_Login_Login.setOnClickListener {
             UserTask(mContext).login(
-                EDT_Login_Login_Id.text.toString(),
-                EDT_Login_Login_Pw.text.toString(),
+                EDT_Login_Id.text.toString(),
+                EDT_Login_Password.text.toString(),
                 viewModel.infoGet("deviceType"),
-                Config.getInstance().token,
                 viewModel.infoGet("appVersion"),
                 viewModel.infoGet("deviceModel"),
                 viewModel.infoGet("deviceSerial"),

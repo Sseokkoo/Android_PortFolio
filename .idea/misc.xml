@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Portfolio/app/src/main/res/drawable/dialogbg.xml" value="0.38229166666666664" />
+        <entry key="..\:/Android_Portfolio/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.38229166666666664" />
+        <entry key="..\:/Android_Portfolio/app/src/main/res/drawable/login_btn.xml" value="0.38229166666666664" />
+        <entry key="..\:/Android_Portfolio/app/src/main/res/drawable/splash.xml" value="0.38229166666666664" />
+        <entry key="..\:/Android_Portfolio/app/src/main/res/layout/fragment_login_login.xml" value="0.33" />
+        <entry key="..\:/Android_Portfolio/app/src/main/res/layout/fragment_sign_up.xml" value="0.36614583333333334" />
+        <entry key="..\:/Android_Portfolio/app/src/main/res/layout/fragment_signup_dialog.xml" value="0.3004273504273504" />
+        <entry key="..\:/Android_Portfolio/app/src/main/res/layout/layout_login_title.xml" value="0.36614583333333334" />
+        <entry key="..\:/Android_Portfolio/app/src/main/res/menu/menu_bottom_nav.xml" value="0.262037037037037" />
+        <entry key="..\:/Android_Portfolio/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/Sseokkoo/Desktop/ULikeKorea/Android_PortFolio/app/src/main/res/layout/activity_dabase.xml" value="0.24728260869565216" />
         <entry key="..\:/Users/Sseokkoo/Desktop/ULikeKorea/Android_PortFolio/app/src/main/res/layout/activity_intro.xml" value="0.24728260869565216" />
         <entry key="..\:/Users/Sseokkoo/Desktop/ULikeKorea/Android_PortFolio/app/src/main/res/layout/fragment_sign_up.xml" value="0.264" />

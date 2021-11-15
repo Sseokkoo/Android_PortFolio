@@ -1,37 +1,49 @@
 <resources>
     <string name="app_name">Portfolio</string>
-    <string name="intro_title">Hello, I`m Kang Seok Joo\n\nThis is a splash/intro screen.</string>
-    <string name="app_lang">*This application can be replaced in English according to system settings.</string>
-    <string name="Login_tilte">PortFolio</string>
-    <string name="email">Email</string>
-    <string name="pw">PassWord</string>
-    <string name="login">Login</string>
-    <string name="pw_reset">Password Reset</string>
-    <string name="signup">Sign-Up</string>
-    <string name="kakao_signfail">Please check the consent item to enter the email information you are signing up for.</string>
-    <string name="Login_auto">Auto Login</string>
-    <string name="Naver_Sign">It`s linked to Naver. Please wait a moment.</string>
-    <string name="Kakao_Sign">It`s linked to Kakao. Please wait a moment.</string>
-    <string name="Sign_other">Membership type</string>
-    <string name="Sign_email">Email Join</string>
-    <string name="Sign_naver">Naver Join</string>
-    <string name="Naver_Connect">You have successfully logged in to Naver.</string>
-    <string name="Sign_kakao">Kakao Join</string>
-    <string name="Sign_google">Google Join</string>
-    <string name="Cancle">Cancle</string>
-    <string name="nickname">Nickname</string>
-    <string name="pw_confirm">Password Confirm</string>
-    <string name="confirm">confirm</string>
-    <string name="NickName_Enter">Please enter a nickname.</string>
-    <string name="Password_Enter">Please check the password you entered.</string>
-    <string name="email_error1">This is not a valid E-Mail format. Please try again.</string>
-    <string name="email_error2">This email is already in use. Sign in, please.!</string>
-    <string name="pass_error1">Please enter the password by mixing English, numbers, and special characters at least 8 to 15 digits.</string>
-    <string name="pass_error2">Please enter the password without spaces.</string>
-    <string name="pass_error3">Please mix English, numbers, and special characters.</string>
-    <string name="sign_success">Your join was successful. Congratulations on joining us!</string>
-    <string name="sign">Sign_Up</string>
-    <string name="email_error3">Please enter the email without any spaces.</string>
 
+<!--    Key-->
     <string name="kakao_api">cf23d7b83f2ba7af13f7bf203a950183</string>
+
+<!--    Splash-->
+    <string name="intro_title">Hello, I`m Kang Seok Joo\n\nThis is a splash/intro screen.</string>
+    <string name="intro_lang">*This application can be replaced in English according to system settings.</string>
+
+<!--    Login-->
+    <string name="login_tilte">PortFolio</string>
+    <string name="login_sign_check_error">Please check the consent item to enter the email information you are signing up for.</string>
+    <string name="login_naver_wait">It`s linked to Naver. Please wait a moment.</string>
+    <string name="login_kakao_wait">It`s linked to Kakao. Please wait a moment.</string>
+    <string name="login_naver_success">You have successfully logged in to Naver.</string>
+
+<!--    Sign-->
+    <string name="sign_other">Membership type</string>
+    <string name="sign_email">Email Join</string>
+    <string name="sign_naver">Naver Join</string>
+    <string name="sign_kakao">Kakao Join</string>
+    <string name="sign_google">Google Join</string>
+    <string name="sign_nickname_enter">Please enter a nickname.</string>
+    <string name="sign_password_enter">Please check the password you entered.</string>
+    <string name="sign_success">Your join was successful. Congratulations on joining us!</string>
+
+<!--    공용-->
+    <string name="common_email">Email</string>
+    <string name="common_pw">PassWord</string>
+    <string name="common_login">Login</string>
+    <string name="common_pw_reset">Password Reset</string>
+    <string name="common_signup">Sign-Up</string>
+    <string name="common_login_auto">Auto Login</string>
+    <string name="common_cancle">Cancle</string>
+    <string name="common_nickname">Nickname</string>
+    <string name="common_pw_confirm">Password Confirm</string>
+    <string name="common_confirm">confirm</string>
+    <string name="common_do_signup">Sign_Up</string>
+
+<!--    Error-->
+    <string name="error_email_form">This is not a valid E-Mail format. Please try again.</string>
+    <string name="error_email_use">This email is already in use. Sign in, please.!</string>
+    <string name="error_pass_form">Please enter the password by mixing English, numbers, and special characters at least 8 to 15 digits.</string>
+    <string name="error_pass_no_empty">Please enter the password without spaces.</string>
+    <string name="error_email_no_empty">Please enter the email without any spaces.</string>
+    <string name="copyright">Copyright 2021. KSJ. PortFollo</string>
+
 </resources>

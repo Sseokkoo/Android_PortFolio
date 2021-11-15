@@ -24,34 +24,34 @@ public class SignUp_Check extends AppCompatActivity {
         Password = pref.getString("password","");
         Name = pref.getString("name", "");
         if (!Email.contains("@") || !Email.contains(".")) {
-            dialog.setMessage(getResources().getString(R.string.email_error1));
+            dialog.setMessage(getResources().getString(R.string.error_email_form));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
-            alertDialog.setTitle(getResources().getString(R.string.email));
+            alertDialog.setTitle(getResources().getString(R.string.common_email));
             alertDialog.show();
 //        } else if (Email.equals()) {
-//            dialog.setMessage(getResources().getString(R.string.email_error2));
+//            dialog.setMessage(getResources().getString(R.string.error_email_use));
 //            dialog.setPositiveButton("확인", null);
 //            AlertDialog alertDialog = dialog.create();
-//            alertDialog.setTitle(getResources().getString(R.string.email));
+//            alertDialog.setTitle(getResources().getString(R.string.common_email));
 //            alertDialog.show();
         } else if (!Password.matches("^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[$@$!%*#?&])[A-Za-z[0-9]$@$!%*+#?&]{8,15}$")) {
-            dialog.setMessage(getResources().getString(R.string.pass_error1));
+            dialog.setMessage(getResources().getString(R.string.error_pass_form));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
-            alertDialog.setTitle(getResources().getString(R.string.pw));
+            alertDialog.setTitle(getResources().getString(R.string.common_pw));
             alertDialog.show();
         } else if (Password.contains(" ") || Password.contains("")) {
-            dialog.setMessage(getResources().getString(R.string.pass_error2));
+            dialog.setMessage(getResources().getString(R.string.error_pass_no_empty));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
-            alertDialog.setTitle(getResources().getString(R.string.pw));
+            alertDialog.setTitle(getResources().getString(R.string.common_pw));
             alertDialog.show();
         } else if (Email.contains(" ") || Email.contains("")) {
-            dialog.setMessage(getResources().getString(R.string.email_error3));
+            dialog.setMessage(getResources().getString(R.string.error_email_no_empty));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
-            alertDialog.setTitle(getResources().getString(R.string.email));
+            alertDialog.setTitle(getResources().getString(R.string.common_email));
             alertDialog.show();
         }
 //        else if (Email.equals(pref.getString("email",""))){
@@ -61,7 +61,7 @@ public class SignUp_Check extends AppCompatActivity {
             dialog.setMessage(getResources().getString(R.string.sign_success));
             dialog.setPositiveButton("확인", null);
             AlertDialog alertDialog = dialog.create();
-            alertDialog.setTitle(getResources().getString(R.string.sign));
+            alertDialog.setTitle(getResources().getString(R.string.common_do_signup));
             alertDialog.show();
 
             Intent intent = new Intent(this, MainActivity.class);

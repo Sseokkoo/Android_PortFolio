@@ -11,4 +11,6 @@
     <color name="main_blue">#5AB6DB</color>
 
     <color name="trans">#00FFFFFF</color>
+    <color name="Thin_Black">#FF141414</color>
+    <color name="Thin_White">#FFC7C7C7</color>
 </resources>

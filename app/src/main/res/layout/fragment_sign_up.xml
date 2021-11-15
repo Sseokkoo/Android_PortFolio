@@ -6,36 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".SignUp.SignUpActivity">
 
-    <RelativeLayout
-        android:id="@+id/SignIn_LI1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/main_blue"
-        android:orientation="horizontal"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <ImageView
-            android:id="@+id/SignIn_IVBack"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/icon_back"
-            android:layout_gravity="center"
-            android:layout_marginLeft="16dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="@string/signup"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="24sp"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/esamanru"
-            />
-
-    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,11 +20,11 @@
             android:id="@+id/SignIn_EDTName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/nickname"
+            android:hint="@string/common_nickname"
             android:paddingLeft="12dp"
             android:paddingVertical="12dp"
             android:textSize="16sp"
-            android:background="@drawable/login_btn"
+            android:background="@drawable/shape_login_btn"
             android:inputType="text"
             android:textColorHint="#C7C7C7" />
 
@@ -65,9 +35,9 @@
             android:layout_marginTop="8dp"
             android:paddingLeft="12dp"
             android:paddingVertical="12dp"
-            android:hint="@string/email"
+            android:hint="@string/common_email"
             android:textSize="16sp"
-            android:background="@drawable/login_btn"
+            android:background="@drawable/shape_login_btn"
             android:inputType="textEmailAddress"
             android:textColorHint="#C7C7C7" />
 
@@ -77,11 +47,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="@string/pw"
+            android:hint="@string/common_pw"
             android:paddingLeft="12dp"
             android:paddingVertical="12dp"
             android:textSize="16sp"
-            android:background="@drawable/login_btn"
+            android:background="@drawable/shape_login_btn"
             android:inputType="textPassword"
             android:textColorHint="#C7C7C7" />
 
@@ -92,9 +62,9 @@
             android:layout_marginTop="8dp"
             android:paddingLeft="12dp"
             android:paddingVertical="12dp"
-            android:hint="@string/pw_confirm"
+            android:hint="@string/common_pw_confirm"
             android:textSize="16sp"
-            android:background="@drawable/login_btn"
+            android:background="@drawable/shape_login_btn"
             android:inputType="textPassword"
             android:textColorHint="#C7C7C7" />
 
@@ -111,8 +81,8 @@
         android:textSize="16sp"
         android:layout_marginHorizontal="30dp"
         android:fontFamily="@font/esamanru"
-        android:text="@string/signup"
-        android:background="@drawable/login_btnsub"
+        android:text="@string/common_do_signup"
+        android:background="@drawable/shape_login_btn_sub"
         app:layout_constraintVertical_bias="0.9"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

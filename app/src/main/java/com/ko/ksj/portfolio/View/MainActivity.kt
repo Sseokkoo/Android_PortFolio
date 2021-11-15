@@ -11,6 +11,7 @@ import com.ko.ksj.portfolio.Model.Title
 import com.ko.ksj.portfolio.Model.User
 import com.ko.ksj.portfolio.R
 import com.ko.ksj.portfolio.ViewModel.MainViewModel
+import kotlinx.android.synthetic.main.layout_login_title.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,10 +34,7 @@ class MainActivity : AppCompatActivity() {
 //        model.getUsers().observe(this, Observer<List<User>> { users ->
 //            // update UI
 //        })
-navController
-        model.getTitle().observe(this, Observer{
 
-        })
     }
 
     fun Init() {
@@ -45,15 +43,13 @@ navController
         val listener =
             NavController.OnDestinationChangedListener { controller, destination, arguments ->
                 Label = navController.currentDestination?.label.toString()
-                setting()
             }
 
         navController.addOnDestinationChangedListener(listener)
-
         KakaoSdk.init(this, resources.getString(R.string.kakao_api))
-    }
 
-    fun setting() {
-
+        Title().label = TV_Login_Title_Name
+        Title().leftIcon = IV_Login_Title_Left
+        Title().rightIcon = IV_Login_Title_Right
     }
 }

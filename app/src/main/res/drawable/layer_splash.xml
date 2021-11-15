@@ -5,7 +5,7 @@
         <bitmap
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/intro"
+        android:src="@drawable/source_intro"
         android:gravity="center">
         </bitmap>
 

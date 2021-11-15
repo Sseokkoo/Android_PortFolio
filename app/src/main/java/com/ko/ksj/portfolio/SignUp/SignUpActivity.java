@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ko.ksj.portfolio.Login.Login;
 import com.ko.ksj.portfolio.R;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -86,10 +85,10 @@ public class SignUpActivity extends AppCompatActivity {
                 AlertDialog.Builder dialog = new AlertDialog.Builder(this);
 
                 if (edit_pass.getVisibility() == View.VISIBLE && !pass.equals(passok) && pass != null) {
-                    dialog.setMessage(getResources().getString(R.string.Password_Enter));
-                    dialog.setPositiveButton(getResources().getString(R.string.confirm), null);
+                    dialog.setMessage(getResources().getString(R.string.sign_password_enter));
+                    dialog.setPositiveButton(getResources().getString(R.string.common_confirm), null);
                     AlertDialog alertDialog = dialog.create();
-                    alertDialog.setTitle(getResources().getString(R.string.pw));
+                    alertDialog.setTitle(getResources().getString(R.string.common_pw));
                     alertDialog.show();
 
                 } else {

@@ -22,7 +22,7 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true" />
     <ImageView
-        android:id="@+id/IV_Login_Title_Serch"
+        android:id="@+id/IV_Login_Title_Right"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_alignParentEnd="true"

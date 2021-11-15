@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ko.ksj.portfolio.Google.Google_Init;
 import com.ko.ksj.portfolio.Kakao.Kakao_Init;
-import com.ko.ksj.portfolio.Login.Login;
 import com.ko.ksj.portfolio.R;
 
 public class SignUpDialog extends AppCompatActivity {
@@ -37,7 +36,7 @@ public class SignUpDialog extends AppCompatActivity {
             finish();
         });
         naver.setOnClickListener(v -> {
-            Toast.makeText(this, getResources().getString(R.string.Naver_Sign), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.login_naver_wait), Toast.LENGTH_SHORT).show();
             Login login = new Login();
             login.Naver_start();
             finish();
@@ -48,7 +47,7 @@ public class SignUpDialog extends AppCompatActivity {
             finish();
         });
         kakao.setOnClickListener(v -> {
-            Toast.makeText(this, getResources().getString(R.string.Kakao_Sign), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.login_kakao_wait), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, Kakao_Init.class);
             startActivity(intent);
             finish();
