@@ -3,27 +3,27 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_navigation_tabbar_home_24px_selectedlight"
-        android:title="@string/title_home" />
+        android:icon="@drawable/ic_nav_home_24"
+        android:title="@string/common_home" />
 
     <item
-        android:id="@+id/navigation_entity"
-        android:icon="@drawable/ic_navigation_tabbar_cow_24px_selectedlight"
-        android:title="@string/title_entity" />
+        android:id="@+id/navigation_map"
+        android:icon="@drawable/ic_nav_map_24"
+        android:title="@string/common_map" />
 
     <item
-        android:id="@+id/navigation_breed"
-        android:icon="@drawable/ic_navigation_tabbar_breeding_24px_selectedlight"
-        android:title="@string/title_breed" />
+        android:id="@+id/navigation_chart"
+        android:icon="@drawable/ic_nav_chart_24"
+        android:title="@string/common_chart" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_navigation_tabbar_alarm_24px_selectedlight"
-        android:title="@string/title_notifications" />
+        android:icon="@drawable/ic_nav_setting_24"
+        android:title="@string/common_setting" />
 
     <item
-        android:id="@+id/navigation_more"
-        android:icon="@drawable/ic_navigation_tabbar_seemore_24px_selectedlight"
-        android:title="@string/title_more" />
+        android:id="@+id/navigation_my"
+        android:icon="@drawable/ic_nav_my_24"
+        android:title="@string/common_my" />
 
 </menu>

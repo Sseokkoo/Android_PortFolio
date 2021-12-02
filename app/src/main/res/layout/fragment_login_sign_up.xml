@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="user"
+            type="com.ko.ksj.portfolio.model.User" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.login.signup.SignUpActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/xxxdpi_30"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3">
+
+            <EditText
+                android:id="@+id/EDT_Login_Signup_NickName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_login_edt"
+                android:hint="@string/common_nickname"
+                android:text="@{user.nick_name}"
+                android:inputType="text"
+                android:paddingVertical="@dimen/xxxdpi_12"
+                android:paddingStart="@dimen/xxxdpi_12"
+                android:textColorHint="@color/Thin_White"
+                android:textSize="@dimen/xxxsp_16"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/TV_Login_Signup_NickName_SUb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/xxxdpi_16"
+                android:layout_marginVertical="@dimen/xxxdpi_8"
+                android:text="@string/sign_nickname_sub"
+                android:textSize="@dimen/xxxsp_10" />
+
+
+            <EditText
+                android:id="@+id/EDT_Login_Signup_Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_login_edt"
+                android:hint="@string/common_email"
+                android:text="@{user.email}"
+                android:inputType="textEmailAddress"
+                android:paddingVertical="@dimen/xxxdpi_12"
+                android:paddingStart="@dimen/xxxdpi_12"
+                android:textColorHint="@color/Thin_White"
+                android:textSize="@dimen/xxxsp_16"
+                tools:ignore="RtlSymmetry" />
+
+
+            <TextView
+                android:id="@+id/TV_Login_Signup_Email_SUb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_email_sub"
+                android:layout_marginHorizontal="@dimen/xxxdpi_16"
+                android:layout_marginVertical="@dimen/xxxdpi_8"
+                android:textSize="@dimen/xxxsp_10" />
+
+            <EditText
+                android:id="@+id/EDT_Login_Signup_Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxxdpi_8"
+                android:background="@drawable/shape_login_edt"
+                android:hint="@string/common_pw"
+                android:text="@{user.password}"
+                android:inputType="textPassword"
+                android:paddingVertical="@dimen/xxxdpi_12"
+                android:paddingStart="@dimen/xxxdpi_12"
+                android:textColorHint="@color/Thin_White"
+                android:textSize="@dimen/xxxsp_16"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/TV_Login_Signup_Password_Sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/xxxdpi_16"
+                android:layout_marginVertical="@dimen/xxxdpi_8"
+                android:text="@string/error_pass_form"
+                android:textSize="@dimen/xxxsp_10" />
+
+            <EditText
+                android:id="@+id/EDT_Login_Signup_PassOk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxxdpi_8"
+                android:background="@drawable/shape_login_edt"
+                android:hint="@string/common_pw_confirm"
+                android:inputType="textPassword"
+                android:paddingVertical="@dimen/xxxdpi_12"
+                android:paddingStart="@dimen/xxxdpi_12"
+                android:textColorHint="@color/Thin_White"
+                android:textSize="@dimen/xxxsp_16"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/TV_Login_Signup_PassOk_Sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/xxxdpi_16"
+                android:layout_marginVertical="@dimen/xxxdpi_8"
+                android:text="@string/sign_password_result"
+                android:textSize="@dimen/xxxsp_10" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/BTN_Login_Signup_BTN"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxxdpi_45"
+            android:layout_marginHorizontal="@dimen/xxxdpi_30"
+            android:background="@drawable/shape_login_btn_sub"
+            android:fontFamily="@font/esamanru"
+            android:text="@string/common_do_signup"
+            android:textColor="@color/white"
+            android:textSize="@dimen/xxxsp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

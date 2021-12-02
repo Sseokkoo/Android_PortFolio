@@ -12,7 +12,6 @@
     <dimen name="size_0dp">0dp</dimen>
     <dimen name="size_4dp">4dp</dimen>
 
-
     <dimen name="xxxdpi_8">8dp</dimen>
     <dimen name="xxxdpi_10">10dp</dimen>
     <dimen name="xxxdpi_12">12dp</dimen>
@@ -24,6 +23,7 @@
     <dimen name="xxxdpi_36">36dp</dimen>
     <dimen name="xxxdpi_45">45dp</dimen>
     <dimen name="xxxdpi_50">50dp</dimen>
+    <dimen name="xxxdpi_65">65dp</dimen>
 
     <dimen name="xxxsp_10">10sp</dimen>
     <dimen name="xxxsp_12">12sp</dimen>
@@ -34,5 +34,6 @@
     <dimen name="xxxsp_22">22sp</dimen>
     <dimen name="xxxsp_28">28sp</dimen>
     <dimen name="xxxsp_45">45sp</dimen>
-
+    <dimen name="xxxsp_15">15sp</dimen>
+    <dimen name="xxxsp_60">60sp</dimen>
 </resources>

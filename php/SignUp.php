@@ -1,5 +1,5 @@
 <?php 
-    $con = mysqli_connect("localhost", "root", "0502", "test");
+    $con = mysqli_connect("localhost", "root", "0502", "portfolio");
     mysqli_query($con,'SET NAMES utf8');
  
     $nick_name = $_POST["nick_name"];
@@ -12,10 +12,10 @@
     mysqli_stmt_execute($statement);
 
     $response = array();
-    $error = mysqli_connect_error();
-    $errno = mysqli_connect_errno();
+    $error = mysqli_error($con);
+    $errno = mysqli_errno($con);
  
-    if(mysqli_stmt_store_result($statement)){
+    if($error = null){
         $response["result"] = "success";
         $response["message"] = $error;
     }else{

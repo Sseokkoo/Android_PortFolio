@@ -3,7 +3,7 @@
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $con = mysqli_connect("localhost", "root", "0502", "test");
+    $con = mysqli_connect("localhost", "root", "0502", "portfolio");
     mysqli_query($con,'SET NAMES utf8');
     
     $statement = mysqli_prepare($con, "UPDATE user_info SET nick_name = ?, password = ? WHERE email = ?");
@@ -13,8 +13,7 @@
     mysqli_stmt_store_result($statement);
     mysqli_stmt_bind_result($statement, $nick_name, $email, $password, $type);
  
-    $error = mysqli_connect_error();
-    $errno = mysqli_connect_errno();
+    $error = mysqli_error($con);
 
     $response = array();
     $response["result"] = "failed";

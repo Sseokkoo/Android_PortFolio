@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "810209169632",
-    "project_id": "portfolio-a3fbd",
-    "storage_bucket": "portfolio-a3fbd.appspot.com"
+    "project_number": "371194593371",
+    "project_id": "portpolio-6f535",
+    "storage_bucket": "portpolio-6f535.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:810209169632:android:9cf74895688a8960998085",
+        "mobilesdk_app_id": "1:371194593371:android:6f78e005ba393eacf6bf7e",
         "android_client_info": {
           "package_name": "com.ko.ksj.portfolio"
         }
       },
       "oauth_client": [
         {
-          "client_id": "810209169632-9jaj3i7l1n9kksnn0mgh15mgmsso05ro.apps.googleusercontent.com",
+          "client_id": "371194593371-a6grk0p0aju0hchskgcoq636g5t89vj5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.ko.ksj.portfolio",
@@ -22,20 +22,20 @@
           }
         },
         {
-          "client_id": "810209169632-6uhjk1k3s8416rshmqutq46e6ipffhqa.apps.googleusercontent.com",
+          "client_id": "371194593371-ec7sh760rhn1vakqcu10vq0hlp60imkf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBEMWnFG_QDgBty2x7R-6gOU0vZS5oTMuY"
+          "current_key": "AIzaSyD_7lXIQMPFRzYm5CAjz0ZAv7_Nt0cZG7M"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "810209169632-6uhjk1k3s8416rshmqutq46e6ipffhqa.apps.googleusercontent.com",
+              "client_id": "371194593371-ec7sh760rhn1vakqcu10vq0hlp60imkf.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
