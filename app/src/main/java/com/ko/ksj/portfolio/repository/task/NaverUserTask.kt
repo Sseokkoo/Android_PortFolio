@@ -62,6 +62,7 @@ open class NaverUserTask(ctx: Context, navController: NavController) {
 
                         UserTask(mContext).SNS_Login(
                             email,
+                            3,
                             resp,
                             message,
                             jsonaar

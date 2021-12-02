@@ -312,6 +312,7 @@ open class UserTask(ctx: Context) : BasicTask(ctx) {
 
     fun SNS_Login(
         email: String,
+        type: Int,
         resp: AsyncTaskResponse,
         msg: ResponseMessage,
         json: ResponseObjData
@@ -322,6 +323,8 @@ open class UserTask(ctx: Context) : BasicTask(ctx) {
         val jsonObject = JsonObject()
 
         jsonObject.addProperty("email", email)
+        jsonObject.addProperty("type", type)
+
         Log.w(TAG + " SNS_Login", jsonObject.toString())
 
         val call = service.SNS_Login(jsonObject)

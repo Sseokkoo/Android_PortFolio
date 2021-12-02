@@ -243,6 +243,7 @@ class LoginFrag : Fragment() {
             Config.getInstance().dataInfo = dataInfo
             UserTask(mContext).SNS_Login(
                 user.email.toString(),
+                4,
                 response,
                 message,
                 json2
@@ -384,6 +385,7 @@ class LoginFrag : Fragment() {
                                 if (user.kakaoAccount?.email != null) {
                                     UserTask(mContext).SNS_Login(
                                         user.kakaoAccount?.email!!.toString(),
+                                        2,
                                         response,
                                         message,
                                         json2
