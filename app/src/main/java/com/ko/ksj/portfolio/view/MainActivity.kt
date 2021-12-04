@@ -2,12 +2,14 @@ package com.ko.ksj.portfolio.view
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.kakao.sdk.common.KakaoSdk
 import com.kakao.sdk.common.util.Utility
 import com.ko.ksj.portfolio.model.Title
@@ -61,6 +63,8 @@ class MainActivity : AppCompatActivity() {
         Log.e("확인", keyHash)
         KakaoSdk.init(this, resources.getString(R.string.kakao_api))
 
+        binding.BNMainBottomNavigation.visibility = View.VISIBLE
+        binding.BNMainBottomNavigation.setupWithNavController(navController)
     }
 
 }

@@ -68,6 +68,19 @@
                 app:defaultNavHost="true"
                 app:navGraph="@navigation/nav_main_navigation" />
 
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/BN_Main_bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="?android:attr/windowBackground"
+                app:labelVisibilityMode="labeled"
+                app:itemIconSize="24dp"
+                app:itemIconTint="@drawable/sel_home_bottom_nav"
+                app:itemTextColor="@drawable/sel_home_bottom_nav"
+                app:menu="@menu/menu_bottom_nav" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
