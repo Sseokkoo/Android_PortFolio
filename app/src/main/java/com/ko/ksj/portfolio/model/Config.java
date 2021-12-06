@@ -3,7 +3,7 @@ package com.ko.ksj.portfolio.model;
 public class Config {
 
 
-    // gitToken : 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
+    // gitToken : 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
 
     //ToDo : 1:Email, 2:Kakao, 3:Naver, 4:Google
 

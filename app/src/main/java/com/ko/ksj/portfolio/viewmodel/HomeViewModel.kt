@@ -5,70 +5,21 @@ import android.widget.ImageView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.navigation.NavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 import com.ko.ksj.portfolio.R
 
 class HomeViewModel : ViewModel() {
 
     private val live_string = MutableLiveData<String>().apply {}
-    private val live_string2 = MutableLiveData<String>().apply {}
-    private val live_src = MutableLiveData<Int>().apply {}
     private val left_live = MutableLiveData<Int>().apply {}
     private val right_live = MutableLiveData<Int>().apply {}
 
     val left_icon : LiveData<Int> = left_live
     val right_icon : LiveData<Int> = right_live
-    val live_send_src : LiveData<Int> = live_src
     val live_send_string: LiveData<String> = live_string
-    val live_send_string2: LiveData<String> = live_string2
 
-    fun EmailError(email: String, context: Context): Boolean {
-        return if(!email.contains("@") || email.isEmpty() || !email.contains(".")){
-            live_string.value = context.getString(R.string.error_email_form)
-            false
-        }else{
-            live_string.value = context.getString(R.string.common_empty)
-            true
-        }
-    }
-
-    fun PwError(password: String, context: Context): Boolean {
-        return if(!password.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[$@$!%*#?&])[[A-Z][a-z][0-9]$@$!%*+#?&]{8,20}$".toRegex())
-            || password.contains(" ") || password.isEmpty()){
-            live_string2.value = context.resources.getString(R.string.error_pass_form)
-            false
-        }else{
-            live_string2.value = context.resources.getString(R.string.common_empty)
-            true
-        }
-    }
-
-    fun FindToId(boolean: Boolean, context: Context){
-        if (boolean) {
-            live_string.value = context.resources.getString(R.string.findtoid_have_not)
-            live_string2.value = context.resources.getString(R.string.findtoid_main)
-            live_src.value = R.drawable.ic_baseline_block_80
-        }else{
-            live_string.value = context.resources.getString(R.string.common_empty)
-            live_string2.value = context.resources.getString(R.string.common_empty)
-            live_src.value = 0
-        }
-    }
-    fun SignupEmail(email: String, context: Context): Boolean {
-        return if(!email.contains("@") || email.isEmpty() || !email.contains(".")){
-            live_string.value = context.getString(R.string.error_email_form)
-            false
-        }else{
-            live_string.value = context.getString(R.string.sign_email_sub)
-            true
-        }
-    }
-    fun SignupPass(password: String): Boolean {
-        return !(!password.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[$@$!%*#?&])[[A-Z][a-z][0-9]$@$!%*+#?&]{8,20}$".toRegex())
-                || password.contains(" ") || password.isEmpty())
-    }
-    fun SignupPassOk(password: String, passok : String): Boolean {
-        return passok.equals(password)
-    }
 
     fun TitleIcon(left: String, right: String){
         when(left) {
@@ -85,10 +36,13 @@ class HomeViewModel : ViewModel() {
 
     lateinit var IV_Left : ImageView
     lateinit var IV_Right : ImageView
+    lateinit var NV_Controller: NavController
+    lateinit var bottomNavigationView: BottomNavigationView
 
-    fun TitleUi(left: ImageView, right: ImageView){
+    fun TitleUi(left: ImageView, right: ImageView, navController: NavController){
         IV_Left = left
         IV_Right = right
+        NV_Controller = navController
     }
 //    @BindingAdapter({"iamgeUrl"})
 //    fun imgload(imageView: ImageView, resid : Int) {
